@@ -19,6 +19,6 @@ public class DatabaseFactory {
 		default:
 			break;
 		}
-		return new Database(driver,url,id,pw);
+		return new Database(driver,url,id,pw);//객체만들어내는 공장
 	}
 }
