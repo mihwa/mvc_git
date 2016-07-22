@@ -26,7 +26,7 @@ public class MemberController extends HttpServlet {
 		
 		switch (Separator.command.getAction()) {
 		case "login":
-			member.setId(request.getParameter("id"));
+			/*member.setId(request.getParameter("id"));
 			member.setPw(request.getParameter("pw"));
 			String name =service.login(member);
 			
@@ -37,10 +37,10 @@ public class MemberController extends HttpServlet {
 				Separator.command.setDirectory(request.getParameter("directory"));
 				member.setName(name);
 			}
-			request.setAttribute("result",name.equals("")?"로그인실패":member);
+			request.setAttribute("result",name.equals("")?"로그인실패":member);*/
 			break;
 			
-		case "regist":
+		/*case "regist":
 			member.setId(request.getParameter("id"));
 			member.setPw(request.getParameter("pw"));
 			member.setName(request.getParameter("name"));
@@ -71,11 +71,18 @@ public class MemberController extends HttpServlet {
 			String update_result = service.update(member);
 			
 			String  = service.update(member);
-			
+		 	
 			
 			break;
 		case "delete":
-			String pw = request.getParameter("pw")
+			String pw = request.getParameter("pw");
+			if(pw==){
+				request.setAttribute("delete_result", "비밀번호입력후 사용해주세요");
+				Separator.command.setPage("delete");
+				Separator.command.setView();
+			}else{
+				request.setAttribute("delete_result", "비밀번호가 일치하지않습니다");
+			}
 			break;
 		case "list":
 			
@@ -91,7 +98,7 @@ public class MemberController extends HttpServlet {
 			member.setId((request.getParameter("id"));
 			
 			break;//next
-		
+		*/
 		default:
 			break;
 				

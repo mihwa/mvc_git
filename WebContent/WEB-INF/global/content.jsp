@@ -9,7 +9,7 @@
 <body>
 	<jsp:include page="header.jsp"/>
 	<jsp:include page="navi.jsp"/>
-	
+	<h2>${result}님 환영합니다</h2>
 
 	<div id="section">
 		<h2>회원관리</h2>
